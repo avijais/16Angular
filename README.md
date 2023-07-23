@@ -40,3 +40,21 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## 4. To build Highcharts charts, install Highcharts:
 `npm install highcharts --save.`
 
+
+## Console warning when using Organaization highcharts, fixed issue
+`Warning`
+Warning: D:\workspace\angular\16Angular\16Angular\src\app\app.component.ts depends on 'highcharts/modules/exporting'. CommonJS or AMD dependencies can cause optimization bailouts.
+For more info see: https://angular.io/guide/build#configuring-commonjs-dependencies
+
+Warning: D:\workspace\angular\16Angular\16Angular\src\app\app.component.ts depends on 'highcharts/modules/organization'. CommonJS or AMD dependencies can cause optimization bailouts.
+For more info see: https://angular.io/guide/build#configuring-commonjs-dependencies
+
+Warning: D:\workspace\angular\16Angular\16Angular\src\app\app.component.ts depends on 'highcharts/modules/sankey'. CommonJS or AMD dependencies can cause optimization bailouts.
+For more info see: https://angular.io/guide/build#configuring-commonjs-dependencies
+
+`Fixed`
+Added following line of key and array pair in angular.json -> `options` object
+#### `"options": {`
+#####    `"allowedCommonJsDependencies": [`
+#####        `"highcharts"`
+#####    `],`
