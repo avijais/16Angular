@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { OrganizationComponent } from './components/organization/organization.component';
-
-
+// import { OrganizationComponent } from './components/organization/organization.component';
 
 @NgModule({
   declarations: [
-    OrganizationComponent
+    // OrganizationComponent
   ],
   imports: [
     CommonModule
